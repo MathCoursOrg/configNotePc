@@ -50,15 +50,17 @@ ia dim dimension
 
 " Raccourci LaTeX:
 ia it \item
-ia sum \sum_{}^{<Left><Left><Left><Left>
+ia sum \sum_{}^{<Left><Left><Left>
+ia int \int_{}^{<Left><Left><Left>
 ia ssi \iff
 ia infi \infty
 ia rr \mathbb{R}
 ia cc \mathbb{C}
 
 " Mapping Latex:
-imap <A-t> \begin{itemize}<CR>\end{itemize}<ESC>O
+imap <A-s> \begin{itemize}<CR>\end{itemize}<ESC>O
 imap <A-a> \begin{align*}<CR>\end{align*}<ESC>O
 imap <A-b> \begin{}<Left>
 imap <A-e> \end{<C-x><C-o>
-imap <A-f> \frac{}{<Left><Left><Left>
+imap <A-f> \frac{}{<Left><Left>
+imap <A-,> $$<Left>
