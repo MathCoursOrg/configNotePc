@@ -1,0 +1,36 @@
+#C'est un essai {{{
+"[latex]
+de ouf
+[/latex]";"
+[latex]
+de folie
+[/latex]"
+#}}}
+
+#bizarre {{{
+"[latex]
+oui, c'est sur
+[/latex]";"
+[latex]
+c'est bizarre
+[/latex]"
+#}}}
+
+#Gg à toi {{{
+"[latex]
+Ça marche pas mal !
+[/latex]";"
+[latex]
+Le bug de tout à l'heure était bizarre !
+[/latex]"
+#}}}
+
+#C'est propre {{{
+"[latex]
+Ouais, 
+[/latex]";"
+[latex]
+carrément !
+[/latex]"
+#}}}
+
