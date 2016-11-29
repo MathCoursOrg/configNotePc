@@ -24,9 +24,9 @@ function! InsertaNewNote()
     return "\n#<++> {{{\n\"[latex]\n<++>\n[/latex]\";\"\n[latex]\n<++>\n[/latex]\"\n#}}}\n"
 endfunction
 "}}}
-map <Tab> /<++><CR>ce
-imap <Tab> <Esc>/<++><CR>ce
-map <F2> Go<C-R>=InsertaNewNote()<CR><Esc>8k^<Tab>
+map  <C-Tab> /<++><CR>ce
+imap <C-Tab> <Tab> <Esc>/<++><CR>ce
+map <F2> Go<C-R>=InsertaNewNote()<CR><Esc>8k^<C-Tab>
 imap <F2> <Esc><F2>
 "ia $$ [$][/$]<Left><Left><Left><Left>
 "ia lat [latex][/latex]<Esc>7<Left>i
@@ -105,27 +105,27 @@ ia FFG \mathscr{F}(G)
 ia GG \|G\|
 ia cc \mathbb{C}
 ia ccG \mathbb{C}[G]
-ia cex \begin{cex}<CR>\end{cex}<ESC>O 
+ia cex \begin{cex}<CR>\end{cex}<ESC>O
 ia ck \mathcal{C}^{k}
 ia com commutatif
-ia coro \begin{coro}<CR>\end{coro}<ESC>O 
-ia ddx \frac{\mathrm d}{\mathrm d }<Left><Left> 
+ia coro \begin{coro}<CR>\end{coro}<ESC>O
+ia ddx \frac{\mathrm d}{\mathrm d }<Left><Left>
 ia defi \begin{defi}<CR>\end{defi}<ESC>O
 ia delta \delta
 ia deltaa $\delta$
-ia demo \begin{demo}<CR>\end{demo}<ESC>O 
+ia demo \begin{demo}<CR>\end{demo}<ESC>O
 ia ee \mathbb{E}
 ia espacepro $(\Omega, \tau, \mathbb{P})$
 ia ev espace vectoriel
-ia ex \begin{exemple}<CR>\end{exemple}<ESC>O 
-ia exi \begin{exercice}<CR>\end{exercice}<ESC>O 
+ia ex \begin{exemple}<CR>\end{exemple}<ESC>O
+ia exi \begin{exercice}<CR>\end{exercice}<ESC>O
 ia exist \exists
 ia infi \infty
 ia int \int_{}^{<Left><Left><Left>
 ia it \item
 ia ite \begin{itemize}<CR>\end{itemize}<ESC>O
 ia lg \longrightarrow
-ia lgi \longrightarrow \infty 
+ia lgi \longrightarrow \infty
 ia lgn loi des grands nombres
 ia lim \lim_{}<Left><Left>
 ia lp $L^p$
@@ -133,7 +133,7 @@ ia lpsse Les propriétés suivantes sont équivalentes:
 ia lq $L^q$
 ia math \[<CR>\]<ESC>0
 ia mq montrer que
-ia nb \begin{note}<CR>\end{note}<ESC>O 
+ia nb \begin{note}<CR>\end{note}<ESC>O
 ia nn \mathbb{N}
 ia nne \mathbb{N}^*
 ia norm \\|\\|<Left><Left>
@@ -143,9 +143,9 @@ ia pi \pi
 ia pii $\pi$
 ia pp \mathbb{P}
 ia ppp \mathbb{P}
-ia pre \begin{proof}<CR>\end{proof}<ESC>O 
+ia pre \begin{proof}<CR>\end{proof}<ESC>O
 ia proba probabilité
-ia proof \begin{proof}<CR>\end{proof}<ESC>O 
+ia proof \begin{proof}<CR>\end{proof}<ESC>O
 ia prop \begin{prop}<CR>\end{prop}<ESC>O
 ia psi \psi
 ia pt \forall
@@ -160,6 +160,7 @@ ia the \begin{th}<CR>\end{th}<ESC>O
 ia zcG Z(\mathbb{C}[G])
 ia zfG Z(\mathscr{F}(G))
 ia zz \mathbb{Z}
+"ia fr \frac{<++> }{ <++> }<++><ESC>?<++><CR>nnce
 
 "Mapping Latex {{{
 
@@ -167,7 +168,7 @@ imap <A-,> $$<Left>
 imap <A-a> \begin{align*}<CR>\end{align*}<ESC>O
 imap <A-b> \begin{}<Left>
 imap <A-e> \end{<C-x><C-o>
-imap <A-f> \frac{}{<Left><Left>
+"imap <A-f> \frac{}{<Left><Left>
 "}}}
 
 "}}}
