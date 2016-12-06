@@ -25,8 +25,8 @@ function! InsertaNewNote()
 endfunction
 "}}}
 map  <C-Tab> /<++><CR>ce
-imap <C-Tab> <Tab> <Esc>/<++><CR>ce
-map <F2> Go<C-R>=InsertaNewNote()<CR><Esc>8k^<C-Tab>
+imap <C-Tab> <Esc><C-Tab>
+map <F2> GO<C-R>=InsertaNewNote()<CR><Esc>8k^<C-Tab>
 imap <F2> <Esc><F2>
 "ia $$ [$][/$]<Left><Left><Left><Left>
 "ia lat [latex][/latex]<Esc>7<Left>i
@@ -55,6 +55,7 @@ ia cv converge
 ia dap d'après
 ia def définit
 ia del d'éléments
+ia vv $V$
 ia den dénombrable
 ia dif différents
 ia diffeo difféomorphisme
@@ -66,6 +67,7 @@ ia fct fonction
 ia fer fermé
 ia ho holomorphe
 ia homo homogène
+ia hom homomorphisme
 ia ieam il existe au moins
 ia iid variables aléatoires indépendantes et identiquement distribuées
 ia iso isomorphisme
@@ -89,7 +91,9 @@ ia sis s'il existe
 ia sn sinon
 ia ss sous <Left>
 ia ssan sous-anneau
+ia sg sous-groupe
 ia st Soit
+ia supp supposer
 ia th Théorème
 ia tr Tr
 ia uni unitaire
@@ -97,12 +101,17 @@ ia va variable aléatoire
 ia var variable aléatoire réelle
 ia vas variables aléatoires
 ia vasr variables aléatoires réelles
+ia piv (\pi,V)
 "}}}
 
 "Raccourcis LaTeX {{{
+"Tend avec n qui tend vers l'infini:
+"ia fr \frac{<++> }{ <++> }<++><ESC>?<++><CR>nnce
+ia ** ^*
 ia --1 ^{-1}
 ia FFG \mathscr{F}(G)
 ia GG \|G\|
+ia U \bigcup
 ia cc \mathbb{C}
 ia ccG \mathbb{C}[G]
 ia cex \begin{cex}<CR>\end{cex}<ESC>O
@@ -114,14 +123,18 @@ ia defi \begin{defi}<CR>\end{defi}<ESC>O
 ia delta \delta
 ia deltaa $\delta$
 ia demo \begin{demo}<CR>\end{demo}<ESC>O
+ia ds \in
 ia ee \mathbb{E}
+ia epsi \epsilon
 ia espacepro $(\Omega, \tau, \mathbb{P})$
 ia ev espace vectoriel
 ia ex \begin{exemple}<CR>\end{exemple}<ESC>O
 ia exi \begin{exercice}<CR>\end{exercice}<ESC>O
 ia exist \exists
+ia glv GL(V)
+ia include \subset
 ia infi \infty
-ia int \int_{}^{<Left><Left><Left>
+ia inter intervalle
 ia it \item
 ia ite \begin{itemize}<CR>\end{itemize}<ESC>O
 ia lg \longrightarrow
@@ -139,9 +152,8 @@ ia nne \mathbb{N}^*
 ia norm \\|\\|<Left><Left>
 ia phi \phi
 ia phii $\phi$
-ia pi \pi
 ia pii $\pi$
-ia pp \mathbb{P}
+ia pp presque partout
 ia ppp \mathbb{P}
 ia pre \begin{proof}<CR>\end{proof}<ESC>O
 ia proba probabilité
@@ -156,11 +168,12 @@ ia rg \rightarrow
 ia rr \mathbb{R}
 ia ssi \iff
 ia sum \sum_{}^{<Left><Left><Left>
+ia tendpn \overset{n \to \infty}{\longrightarrow}
 ia the \begin{th}<CR>\end{th}<ESC>O
+ia tq \ \text{tel que} \ 
 ia zcG Z(\mathbb{C}[G])
 ia zfG Z(\mathscr{F}(G))
 ia zz \mathbb{Z}
-"ia fr \frac{<++> }{ <++> }<++><ESC>?<++><CR>nnce
 
 "Mapping Latex {{{
 
@@ -172,3 +185,6 @@ imap <A-e> \end{<C-x><C-o>
 "}}}
 
 "}}}
+
+"Raccourcis Anki
+ia nl <br /><CR>
