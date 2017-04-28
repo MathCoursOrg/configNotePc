@@ -8,6 +8,7 @@
 "aussi des mapping LaTeX puisque _Anki_ le supporte.}}}
 
 " Mapping généraux {{{
+map <F9> :make %<CR>
 map <F8> :w<CR>:source %<CR><C-w><C-w>
 map <F7> <C-w><C-w>
 map j gj
@@ -45,15 +46,19 @@ ia ann anneau
 ia at admet
 ia av au voisinage
 ia cad c'est-à-dire
-ia car caractère
 ia cara caractéristique
 ia cl combinaison linéaire
-ia cor Corollaire
 ia cp compact
+ia rn Radon-Nikodym
+ia tt \theta
+ia eet \mathbb{E}_{\theta}
+ia ddt \frac{\partial}{\partial\theta}
+ia ddt2 \frac{\partial^2}{\partial\theta^2}
+ia ptt \mathcal{P}_{\theta}
+ia ftt f_{\theta}(
 ia cst constante
 ia cv converge
 ia dap d'après
-ia def définit
 ia del d'éléments
 ia vv $V$
 ia den dénombrable
@@ -62,7 +67,6 @@ ia diffeo difféomorphisme
 ia dim dimension
 ia dod d'ordre
 ia ens ensemble
-ia eq equation
 ia fct fonction
 ia fer fermé
 ia ho holomorphe
@@ -94,10 +98,8 @@ ia ssan sous-anneau
 ia sg sous-groupe
 ia st Soit
 ia supp supposer
-ia th Théorème
 ia tr Tr
 ia uni unitaire
-ia va variable aléatoire
 ia var variable aléatoire réelle
 ia vas variables aléatoires
 ia vasr variables aléatoires réelles
@@ -110,6 +112,7 @@ ia piv (\pi,V)
 ia ** ^*
 ia --1 ^{-1}
 ia FFG \mathscr{F}(G)
+ia fp \mathrm{F}_p
 ia GG \|G\|
 ia U \bigcup
 ia cc \mathbb{C}
@@ -150,7 +153,6 @@ ia nb \begin{note}<CR>\end{note}<ESC>O
 ia nn \mathbb{N}
 ia nne \mathbb{N}^*
 ia norm \\|\\|<Left><Left>
-ia phi \phi
 ia phii $\phi$
 ia pii $\pi$
 ia pp presque partout
@@ -164,21 +166,22 @@ ia pt \forall
 ia qq \mathbb{Q}
 ia rd \mathbb{R}^d
 ia rep représentation
-ia rg \rightarrow
+ia rg \longrightarrow
 ia rr \mathbb{R}
 ia ssi \iff
 ia sum \sum_{}^{<Left><Left><Left>
 ia tendpn \overset{n \to \infty}{\longrightarrow}
-ia the \begin{th}<CR>\end{th}<ESC>O
-ia tq \ \text{tel que} \ 
+ia th \begin{tho}<CR>\end{tho}<ESC>O
+" ia tq \ \text{tel que}
 ia zcG Z(\mathbb{C}[G])
 ia zfG Z(\mathscr{F}(G))
 ia zz \mathbb{Z}
+ia kk \mathbb{K}
 
 "Mapping Latex {{{
 
 imap <A-,> $$<Left>
-imap <A-a> \begin{align*}<CR>\end{align*}<ESC>O
+ia align \begin{align*}<CR>\end{align*}<ESC>O
 imap <A-b> \begin{}<Left>
 imap <A-e> \end{<C-x><C-o>
 "imap <A-f> \frac{}{<Left><Left>
